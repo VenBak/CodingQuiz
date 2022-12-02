@@ -1,0 +1,47 @@
+* {
+    border: 2px solid black;
+    padding: 1px;
+}
+
+
+
+.display-flex {
+    display: flex;
+}
+
+.display-inline{
+    display: inline;
+}
+
+#timer {
+    float: right;
+}
+
+/* Header */
+
+.header {
+    justify-content: space-evenly;
+}
+
+#highscore {
+
+}
+
+#timer {
+
+}
+
+/* Quiz section */
+
+.quiz {
+    width: 425px;
+    margin: 100px auto;
+}
+
+.content {
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+}

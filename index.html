@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
-    <div><button>Play Quiz</button></div>
+    <button type="button" class="btn btn-warning" id="playgame">Play Game</button>
     <header>
         <div class="display-flex header">
             <a href="" id="highscore">Checkout the highscores</a>
@@ -17,21 +19,25 @@
     </header>
     <main class="display-flex content">
         <div class="quiz">
-            <p class="question">How tall is mount Everset ?</p>
+        <!-- <p class="question">How tall is mount Everset ?</p>
             <div class="answers">
-                <ul class="optionbox">
-                    <label for="1" class="answer1"></label><input class="answer" type="checkbox">
-                    <label for="2" class="answer2"></label><input class="answer" type="checkbox">
-                    <label for="3" class="answer3"></label><input class="answer" type="checkbox">
-                    <label for="4" class="answer4"></label><input class="answer" type="checkbox">
-                </ul>
+                <div class="optionbox">
+                    <p class="answer1">Big</p><input class="answer" type="checkbox">
+                    <p class="answer2">Small</p><input class="answer" type="checkbox">
+                    <p class="answer3">Medium</p><input class="answer" type="checkbox">
+                    <p class="answer4">Ver Big</p><input class="answer" type="checkbox">
+                </div>
                 <div>
                     <button>Back</button>
                      <button>Next Question</button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

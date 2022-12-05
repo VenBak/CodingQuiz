@@ -2,9 +2,9 @@ var playgame = document.querySelector("#playgame");
 var question = 1;
 
 // Renders the block elements to contain the Quiz when Play game is pressed
-playgame.addEventListener("click", renderQuiz);
+playgame.addEventListener("click", renderQuiz, {once:true});
 // Starts a timer when Play game is pressed
-playgame.addEventListener("click", startTimer);
+playgame.addEventListener("click", startTimer, {once:true});
 
 // Create elements with the question and answers
 
@@ -14,8 +14,7 @@ function renderQuiz() {
     // Grab the parent
         var quiz = document.querySelector(".quiz");
             // Create the Question element and the container for the answers
-            var p = document.createElement("p");
-            quiz.appendChild(p);
+            
             var div = document.createElement("div");
             div.setAttribute("class", "answers");
             quiz.appendChild(div);
@@ -26,6 +25,7 @@ function renderQuiz() {
                     // Creates the div for the the answers and a p for the question
                     var optionbox = document.querySelector(".optionbox");
                     var question = document.createElement("p");
+                    question.setAttribute("class", "question");
                     // Creates the first answer text and checkbox
                     var answer1text = document.createElement("p");
                     answer1text.setAttribute("class", "answer1text");
@@ -77,7 +77,7 @@ function renderQuiz() {
                     Object.assign(nextBtn, {
                     className: 'btn btn-success',
                     onclick: function () {
-                    question--;
+                    question++;
                     }
                     })
                     divEl2.append(backBtn);
@@ -108,7 +108,6 @@ var timerEl = document.querySelector("#timer");
       }, 1000);
 }
 
-console.log(question);
 
 // Give the question elements and answers the text
 

@@ -117,6 +117,7 @@ const Questions = [
 ];
 
 startTimer();
+
 // update the quiz every second, so the
 setInterval(renderquiz, 1000);
 var index = 0;
@@ -198,6 +199,7 @@ answer4.addEventListener
 })
 
 
+
 // Starts a countdown for the Quiz
 
 function startTimer() {
@@ -211,8 +213,9 @@ function startTimer() {
               // Stops execution of action at set interval
               clearInterval(timerInterval);
               alert("Your time is up!")
-              index + 10;
+              index = 11;
             }
           }, 1000);
     }
+
 

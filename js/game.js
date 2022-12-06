@@ -153,9 +153,6 @@ answer1.addEventListener
     if (index == 7) {
         score++;
     }
-    if (index <= 10) {
-
-    }
     index++;
 })
 

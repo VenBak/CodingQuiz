@@ -1,0 +1,143 @@
+// Created the Questions for the quiz as an object
+
+const Questions = [
+{
+    question: "Who played the role Jack Sparrow ?",
+    answers: {
+        a: "Tom Cruise",
+        b: "Tom Hanks",
+        c: "Tom and Jerry",
+        d: "Johnny Depp"
+    },
+    correctanswer: "d",
+},
+{
+    question: "Who played the role Forrest Gump ?",
+    answers: {
+        a: "Tom Cruise",
+        b: "Tom Hanks",
+        c: "John Travlota",
+        d: "Johnny Depp",
+    },
+    correctanswer: "b"
+},
+{
+    question: "Who played the Team Leader in Ocean's Eleven ?",
+    answers: {
+        a: "George Clooney",
+        b: "Brad Pitt",
+        c: "Both of the above",
+        d: "They were all equal",
+    },
+    correctanswer: "d"
+},
+{
+    question: "Who played the character of the Genie in the animated Aladdin ?",
+    answers: {
+        a: "Robin Williams",
+        b: "Samuel L. Jackson",
+        c: "Will Smith",
+        d: "Ben Stiller",
+    },
+    correctanswer: "a"
+},
+{
+    question: "Who played the character of the Genie in the real life Aladdin ?",
+    answers: {
+        a: "Will Smith",
+        b: "Dwayne Johnson",
+        c: "DJ Khaled",
+        d: "Snoop Dogg",
+    },
+    correctanswer: "a"
+}];
+
+startTimer();
+// update the quiz every second, so the
+setInterval(renderquiz, 1000);
+var index = 0;
+var score = 0;
+
+// Pull the specific question and answers and paste it into the content of the html
+
+function renderquiz() {
+document.querySelector("#question").innerHTML = Questions[index].question;
+document.querySelector("#answer1").innerHTML = Questions[index].answers.a;
+document.querySelector("#answer2").innerHTML = Questions[index].answers.b;
+document.querySelector("#answer3").innerHTML = Questions[index].answers.c;
+document.querySelector("#answer4").innerHTML = Questions[index].answers.d;
+document.querySelector("#score").innerHTML = score
+}
+
+// Adds a point to the score if the answer is right, if not it changes question
+
+// Answer a
+var answer1 = document.querySelector("#answer1");
+answer1.addEventListener
+("click", function() {
+    console.log("answer 1 clicked")
+    if (index == 3) {
+        score++;
+    } 
+    if (index == 4) {
+        score++;
+    }
+    index++;
+})
+
+// Answer b
+var answer2 = document.querySelector("#answer2");
+answer2.addEventListener
+("click", function() {
+    console.log("answer 2 clicked");
+    if (index == 1) {
+        score++;
+    }
+    index++;
+})
+
+// Answer c
+var answer3 = document.querySelector("#answer3");
+answer3.addEventListener
+("click", function() {
+    console.log("answer 3 clicked");
+    index++;
+})
+
+// Answer d
+var answer4 = document.querySelector("#answer4");
+answer4.addEventListener
+("click", function() {
+    console.log("answer 4 clicked");
+    if (index == 0) {
+        score++;
+    } 
+    if (index == 2) {
+        score++;
+    }
+    index++;
+})
+
+if (index == 5 || secondsLeft == 0) {
+    alert("time is up")
+}
+
+
+
+// Starts a countdown for the Quiz
+
+
+function startTimer() {
+    var timerEl = document.querySelector("#timer");
+        var secondsLeft = 90;
+        var timerInterval = setInterval(function() {
+            secondsLeft--;
+            timerEl.textContent = "Time left: " + secondsLeft;
+        
+            if(secondsLeft === 0) {
+              // Stops execution of action at set interval
+              clearInterval(timerInterval);
+            }
+          }, 1000);
+    }
+

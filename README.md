@@ -1,6 +1,8 @@
-## <Coding Quiz>
+## Coding Quiz
 
 ## Description
+
+The purpose of this project was to attempt and create a quiz using html,css and javascript. The motivation behind the production of this project was to try and challenge my capibilities 
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 

@@ -1,47 +1,50 @@
+:root {
+    background-color: #545454;
+}
+
 * {
-    border: 2px solid black;
-    padding: 1px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 25px;
 }
 
-
-
-.display-flex {
-    display: flex;
+h {
+    background-color: #545454;
+    margin-bottom: 0;
 }
-
-.display-inline{
-    display: inline;
-}
-
-#timer {
-    float: right;
-}
-
-/* Header */
-
-.header {
-    justify-content: space-evenly;
-}
-
-#highscore {
-
-}
-
-#timer {
-
-}
-
-/* Quiz section */
-
-.quiz {
-    width: 425px;
-    margin: 100px auto;
+.title {
+    background-color: #545454;
 }
 
 .content {
+    background-color: #545454;
+}
+
+#home {
+    background-color: #545454;
+}
+
+.justify-center {
     justify-content: center;
 }
 
-ul {
-    list-style-type: none;
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    width: 300px;
+    margin: 10px;
 }

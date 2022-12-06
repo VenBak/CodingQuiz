@@ -1,0 +1,27 @@
+body {
+    color: aliceblue;
+}
+
+header {
+    color: aliceblue;
+    justify-content: center;
+    display: flex;
+}
+
+.content {
+    justify-content: center;
+    display: flex;
+}
+
+#question {
+    color: aliceblue;
+    text-align: center;
+}
+
+.scoretext {
+    padding-left: 10px;
+}
+
+#score {
+    padding-left: 10px;
+}

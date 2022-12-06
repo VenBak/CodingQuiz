@@ -50,7 +50,71 @@ const Questions = [
         d: "Snoop Dogg",
     },
     correctanswer: "a"
-}];
+},
+{
+    question: "Who plays the voice of lightning mcqueen in cars ?",
+    answers: {
+        a: "Seth Macfarlane",
+        b: "Quentin Tarantino",
+        c: "Bill Nye",
+        d: "Owen Wilson",
+    },
+    correctanswer: "d"
+},
+{
+    question: "Who is the actor with the most oscars",
+    answers: {
+        a: "Katherine Hepburn",
+        b: "Keanu Reeves",
+        c: "Nicolas Cage",
+        d: "Tom Cruise",
+    },
+    correctanswer: "a"
+},
+{
+    question: "Which actor has the most appearances in marvel movies",
+    answers: {
+        a: "Stan Lee",
+        b: "Bruce Lee",
+        c: "Tommy Lee",
+        d: "Bobby Lee",
+    },
+    correctanswer: "a"
+},
+{
+    question: "In which movie did Keanu Reeves out of the few listed ?",
+    answers: {
+        a: "Tenet",
+        b: "Jimmy Neutron",
+        c: "Bill & Ted",
+        d: "Harold & Kumar",
+    },
+    correctanswer: "c"
+},
+{
+    question: "Which actor plays the main role in the cobbler",
+    answers: {
+        a: "Ben Stiller",
+        b: "Adam Sandler",
+        c: "Johnny Depp",
+        d: "James Franco",
+    },
+    correctanswer: "b"
+},
+{
+        question: "Quiz is Over",
+        answers: {
+            a: "Save your score",
+            b: "",
+            c: "",
+            d: "",
+        },
+        correctanswer: "b"
+}
+
+
+
+];
 
 startTimer();
 // update the quiz every second, so the
@@ -72,6 +136,7 @@ document.querySelector("#score").innerHTML = score
 // Adds a point to the score if the answer is right, if not it changes question
 
 // Answer a
+// Adds an index after each question to rotate object and adds to the score if the index matches
 var answer1 = document.querySelector("#answer1");
 answer1.addEventListener
 ("click", function() {
@@ -81,6 +146,15 @@ answer1.addEventListener
     } 
     if (index == 4) {
         score++;
+    }
+    if (index == 6) {
+        score++;
+    }
+    if (index == 7) {
+        score++;
+    }
+    if (index <= 10) {
+
     }
     index++;
 })
@@ -93,6 +167,9 @@ answer2.addEventListener
     if (index == 1) {
         score++;
     }
+    if (index == 9) {
+        score++;
+    }
     index++;
 })
 
@@ -100,7 +177,9 @@ answer2.addEventListener
 var answer3 = document.querySelector("#answer3");
 answer3.addEventListener
 ("click", function() {
-    console.log("answer 3 clicked");
+    if (index == 8) {
+        score++;
+    }
     index++;
 })
 
@@ -115,17 +194,14 @@ answer4.addEventListener
     if (index == 2) {
         score++;
     }
+    if (index == 5) {
+        score++;
+    }
     index++;
 })
 
-if (index == 5 || secondsLeft == 0) {
-    alert("time is up")
-}
-
-
 
 // Starts a countdown for the Quiz
-
 
 function startTimer() {
     var timerEl = document.querySelector("#timer");
@@ -137,6 +213,8 @@ function startTimer() {
             if(secondsLeft === 0) {
               // Stops execution of action at set interval
               clearInterval(timerInterval);
+              alert("Your time is up!")
+              index + 10;
             }
           }, 1000);
     }

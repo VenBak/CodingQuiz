@@ -14,7 +14,7 @@ The purpose of this project was to attempt and create a quiz using html,css and 
 
 ## Installation
 
-In order to install this website you can either clone the repository or just use this link: https://venbak.github.io/CodingQuiz/game.html 
+In order to install this website you can either clone the repository or just use this link: https://venbak.github.io/CodingQuiz
 
 
 ## Credits
